@@ -26,7 +26,7 @@ const App = () => {
       </Routes>
       {/* <ExploreMenu/> */}
     </div>
-    <AppDownload/>
+    
     <Footer/>
     </>
   );
