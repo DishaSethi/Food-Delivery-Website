@@ -5,9 +5,12 @@ import Home from './components/pages/Home/Home.jsx'; // Adjust path if necessary
 import Cart from './components/pages/Cart/Cart.jsx';
 import PlaceOrder from './components/pages/PlaceOrder/PlaceOrder.jsx';
 import ExploreMenu from './components/ExploreMenu/ExploreMenu.jsx';
+import Footer from './components/Footer/Footer.jsx';
+import AppDownload from './components/AppDownload/AppDownload.jsx';
 
 const App = () => {
   return (
+    <>
     <div className='app'>
       <Navbar />
       <Routes>
@@ -18,6 +21,9 @@ const App = () => {
       </Routes>
       {/* <ExploreMenu/> */}
     </div>
+    <AppDownload/>
+    <Footer/>
+    </>
   );
 };
 
