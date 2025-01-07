@@ -35,7 +35,7 @@ const listFood=async(req,res)=>{
 
     }catch(error){
         console.log(error);
-        res.join({success:false, message:error.message})
+        res.json({success:false, message:error.message})
 
     }
 
