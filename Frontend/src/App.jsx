@@ -9,6 +9,7 @@ import Footer from './components/Footer/Footer.jsx';
 import AppDownload from './components/AppDownload/AppDownload.jsx';
 import LoginPopup from './components/LoginPopup/LoginPopup.jsx';
 import Verify from './components/pages/Verify/Verify.jsx';
+import MyOrders from './components/pages/MyOrders/MyOrders.jsx';
 
 const App = () => {
 
@@ -24,6 +25,7 @@ const App = () => {
         <Route path='/cart' element={<Cart />} />
         <Route path='/order' element={<PlaceOrder />} />
         <Route path='/verify' element={<Verify/>} />
+        <Route path='/myorders' element={<MyOrders/>} />
        
       </Routes>
       {/* <ExploreMenu/> */}
