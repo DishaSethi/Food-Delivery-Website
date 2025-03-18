@@ -7,7 +7,7 @@ const Footer = () => {
     <div className='footer' id='footer'>
         <div className="footer-content">
             <div className="footer-content-left">
-                <img src={assets.logo} alt="" />
+                {/* <img src={assets.logo} alt="" /> */}
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, temporibus impedit quam accusantium, quaerat minima fuga tempora incidunt quae quas veritatis similique excepturi culpa amet quisquam recusandae. Sunt, a numquam!
 
                 </p>
@@ -33,14 +33,14 @@ const Footer = () => {
                 <h2>GET IN TOUCH</h2>
                 <ul>
                     <li>+1-212-456-7890</li>
-                    <li>contact@tomato.com</li>
+                    <li>contact@SmartEats.com</li>
 
                 </ul>
 
             </div>
         </div>
         <hr />
-        <p className='footer-copyright'> Copyright 2025 @Tomato.com-All Rights Reserved</p>
+        <p className='footer-copyright'> Copyright 2025 @SmartEats.com-All Rights Reserved</p>
       
     </div>
   );
