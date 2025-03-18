@@ -10,7 +10,7 @@
     place-self: center;
     border: 5px;
     border:5px solid #bdbdbd;
-    border-top-color: tomato;
+    border-top-color: rgb(14, 165, 39);
     border-radius: 50%;
     animation: rotate 1s infinite;
 }
