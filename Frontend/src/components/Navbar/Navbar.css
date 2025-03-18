@@ -5,9 +5,11 @@
     align-items: center;
 }
 
-.navbar .logo{
-    width: 150px;
+.navbar .logo {
+   width: 2px; /* Prevent overflow */
 }
+
+
 
 .navbar-menu{
     display: flex;
