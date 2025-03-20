@@ -1,5 +1,5 @@
 
-# DishyDashy
+# SmartEats
 
 A full-stack food delivery application built with the MERN (MongoDB, Express, React, Node.js) stack. This platform provides a seamless food ordering experience for customers and a powerful admin dashboard for managing orders, and more.
 
