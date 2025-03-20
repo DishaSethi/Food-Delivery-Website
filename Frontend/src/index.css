@@ -26,6 +26,9 @@ body.dark .food-item-counter p{
   color: black;
   
 }
+body.dark .cart-items-item p{
+  color: #fff;
+}
 a{
   text-decoration: none;
   color: inherit;
