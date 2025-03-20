@@ -1,43 +1,101 @@
-.place-order{
+.place-order {
     display: flex;
+    flex-wrap: wrap;  /* Allows wrapping on smaller screens */
     align-items: start;
     justify-content: space-between;
-    gap: 50px;
+    gap: 30px;
     margin-top: 100px;
+    padding: 20px;
 }
 
-.place-order-left{
+/* Left Section */
+.place-order-left {
     width: 100%;
-    max-width: max(30%,500px);
+    max-width: max(30%, 500px);
 }
 
-.place-order-left .title{
+.place-order-left .title {
     font-size: 30px;
     font-weight: 600;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
-.place-order-left input{
+.place-order-left input {
     margin-bottom: 15px;
-    width:100%;
-    padding:10px;
-    border:1px solid white;
+    width: 100%;
+    padding: 12px;  /* Increased padding for better touch experience */
+    border: 1px solid white;
     border-radius: 4px;
+    font-size: 16px;
     outline-color: rgb(14, 165, 39);
-
 }
 
-.place-order-left .multi-field{
+.place-order-left .multi-field {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;  /* Allows wrapping in case of small screens */
 }
 
-.place-order-right{
+/* Right Section */
+.place-order-right {
     width: 100%;
-    max-width: max(40%,500px);
+    max-width: max(40%, 500px);
 }
 
-.place-order .cart-total button{
+/* Button Styles */
+.place-order .cart-total button {
     margin-top: 30px;
+    width: 100%; /* Makes button full-width on smaller screens */
+    padding: 12px;
+    font-size: 16px;
 }
 
+/* ---- Responsive Design ---- */
+@media screen and (max-width: 768px) {
+    .place-order {
+        flex-direction: column;  /* Stack items vertically */
+        align-items: center;
+    }
+
+    .place-order-left, 
+    .place-order-right {
+        max-width: 100%;  /* Full width on smaller screens */
+    }
+
+    .place-order-left .multi-field {
+        flex-direction: column;  /* Stack input fields */
+    }
+
+    .place-order-left .title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .place-order-left input {
+        font-size: 14px;
+    }
+
+    .place-order .cart-total button {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .place-order {
+        padding: 10px;
+        margin-top: 50px;
+    }
+
+    .place-order-left .title {
+        font-size: 20px;
+    }
+
+    .place-order-left input {
+        padding: 10px;
+    }
+
+    .place-order .cart-total button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

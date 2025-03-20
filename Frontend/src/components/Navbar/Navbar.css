@@ -31,6 +31,9 @@
     cursor: pointer;
     font-size: 20px;
     margin-left: 10px;
+    color: inherit;
+    display: flex;
+    align-items: center;
 }
 
 /* Desktop Navigation */
@@ -46,6 +49,7 @@
     text-decoration: none;
     color: inherit;
 }
+
 
 .navbar-menu .active {
     padding-bottom: 2px;
@@ -203,5 +207,13 @@
         background: #121212;
         color: #fff;
     }
+    .navbar-right {
+        gap: 15px; /* Reduce gap to prevent overflow */
+    }
 
+    /* Keep Theme Toggle Inside Navbar */
+    .theme-toggle {
+        font-size: 18px;
+        margin-left: 5px;
+    
 }
