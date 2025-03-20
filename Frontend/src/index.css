@@ -13,6 +13,19 @@ body{
   min-height: 100vh;
 }
 
+
+body.dark{
+  background-color: #121212;
+   color: #fff;
+}
+
+body .dark a{
+  color: #fff;
+}
+body.dark .food-item-counter p{
+  color: black;
+  
+}
 a{
   text-decoration: none;
   color: inherit;
@@ -21,6 +34,20 @@ a{
 .app{
   width: 80%;
   margin: auto;
+
+
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+body.dark button {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark h1{
+  color: #fff;
 }
 
 @keyframes fadeIn{
