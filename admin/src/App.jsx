@@ -6,6 +6,8 @@ import Orders from './pages/Orders/Orders.jsx';
 import List from './pages/List/List.jsx';
 import Add from './pages/Add/Add.jsx';
 import { ToastContainer } from 'react-toastify';
+
+import Dashboard from './pages/Dashboard/Dashboard.jsx';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -26,6 +28,7 @@ const App = () => {
                 <Route path="/add" element={<Add url={url}/>}/>
                 <Route path="/list" element={<List url={url}/>}/>
                 <Route path="/orders" element={<Orders url={url}/>}/>
+                <Route path="/dashboard" element={<Dashboard/>}/>
             </Routes>
       </div>
     </div>
