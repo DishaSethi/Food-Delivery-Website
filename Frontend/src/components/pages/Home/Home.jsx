@@ -7,6 +7,7 @@ import AppDownload from '../../AppDownload/AppDownload';
 
 const Home = () => {
   const [category, setCategory] = useState('All');
+  const [searchTerm, setSearchTerm]=useState('');
   return (
     <div>
       <Header/>
