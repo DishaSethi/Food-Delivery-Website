@@ -10,7 +10,7 @@ import AppDownload from './components/AppDownload/AppDownload.jsx';
 import LoginPopup from './components/LoginPopup/LoginPopup.jsx';
 import Verify from './components/pages/Verify/Verify.jsx';
 import MyOrders from './components/pages/MyOrders/MyOrders.jsx';
-
+import Search from './components/pages/Search/Search.jsx';
 const App = () => {
 
   const [showLogin, setShowLogin]=useState(false);
@@ -26,6 +26,7 @@ const App = () => {
         <Route path='/order' element={<PlaceOrder />} />
         <Route path='/verify' element={<Verify/>} />
         <Route path='/myorders' element={<MyOrders/>} />
+        <Route path='/search' element={<Search/>} />
        
       </Routes>
       {/* <ExploreMenu/> */}

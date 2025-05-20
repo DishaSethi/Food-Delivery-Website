@@ -41,7 +41,13 @@ const Navbar = ({ setShowLogin }) => {
 
       {/* Navbar Right Section */}
       <div className="navbar-right">
-        <img src={assets.search_icon} alt="" />
+        {/* Search Bar */}
+        {/* <input type="text" placeholder='Search food..' className='navbar-search-input' onChange={(e)=>setSearchTerm(e.target.value)} /> */}
+
+        <Link to="/search">
+          <img src={assets.search_icon} alt="" />
+      </Link>
+
         <div className="navbar-search-icon">
           <Link to="/cart">
             <img src={assets.basket_icon} alt="" />
