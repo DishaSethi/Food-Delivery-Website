@@ -246,4 +246,69 @@ const getAdminDashboardData=async(req,res)=>{
     }
   };
 
-export { placeOrder, verifyOrder, userOrders, listOrders, updateStatus, getOrderStatusSummary, getAdminDashboardData, getRevenueThisWeek };
+  const getCategoryWiseSales=async(req,res)=>{
+    try{
+          console.log("getCategoryWiseSales called");
+
+    const orders = await orderModel.find();
+    console.log("Orders length:", orders.length);
+    console.log("Orders:", JSON.stringify(orders.items, null, 2));
+
+      const categorySales={};
+
+      orders.forEach(order=>{
+        order.items.forEach(item=>{
+          const {category, quantity}=item;
+          if(categorySales[category]){
+            categorySales[category]+=quantity;
+          }else{
+            categorySales[category]=quantity;
+          }
+        });
+
+      });
+
+      const result=Object.entries(categorySales).map(([category,itemsSold])=>({
+        category,
+        itemsSold,
+      }));
+      res.status(200).json({success:true, data:result});
+    }catch(error){
+      console.log(error);
+      res.status(500).json({success:false,message:"Error fetching category sales data"});
+    }
+  };
+
+const getPeakHourSales=async(req,res)=>{
+
+  try{
+    const orders=await orderModel.find();
+
+    orders.forEach(order=>{
+      console.log(order.createdAt);
+    });
+    
+    const hourlySales=new Array(24).fill(0);
+
+    orders.forEach(order=>{
+      const hour=new Date(order.createdAt).getHours();
+      hourlySales[hour]++;
+    });
+
+    const result=hourlySales.map((sales,hour)=>
+    ({
+      hour:`${hour}:00`,
+      orders:sales,
+
+    }));
+
+    res.status(200).json({success:true,data:result});
+
+  }catch(err){
+    console.log(err);
+    res.status(500).json({success:false,message:"Error fetching peak hour data"});
+
+  }
+};
+
+export { placeOrder, verifyOrder, userOrders, listOrders, updateStatus, getOrderStatusSummary, getAdminDashboardData, getRevenueThisWeek, getCategoryWiseSales ,getPeakHourSales};

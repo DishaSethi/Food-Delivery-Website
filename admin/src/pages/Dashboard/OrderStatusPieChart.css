@@ -4,6 +4,8 @@
     border-radius:16px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     margin-top: 20px;
+    width: 100%;
+    max-width:100%;
 }
 
 .order-status-title{
